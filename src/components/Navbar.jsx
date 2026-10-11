@@ -8,15 +8,10 @@ import { BRAND_CONFIG } from "../data/content";
 
 const NAV_LINKS = [
   { id: "hero", label: "Home" },
-  { id: "about", label: "Story" },
   { id: "cafe", label: "Cafe" },
   { id: "gifting", label: "Gifting" },
-  { id: "process", label: "Process" },
   { id: "collection", label: "Collection" },
-  { id: "corporate", label: "Corporate" },
   { id: "gallery", label: "Gallery" },
-  { id: "testimonials", label: "Reviews" },
-  { id: "faq", label: "FAQ" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -64,25 +59,25 @@ export function Navbar({ onOpenEnquiry }) {
               <Logo variant="dark" />
             </button>
 
-            {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 px-3 py-1.5 rounded-full bg-forest-900/90 border border-lime-500/20 backdrop-blur-md shadow-sm shrink">
+            {/* Desktop Navigation Links - Prominent & Balanced */}
+            <nav className="hidden md:flex items-center gap-2 lg:gap-3 px-5 lg:px-6 py-2.5 rounded-full bg-forest-900/90 border border-lime-500/30 backdrop-blur-md shadow-lg shrink">
               {NAV_LINKS.map((link) => {
                 const isActive = activeSection === link.id;
                 return (
                   <button
                     key={link.id}
                     onClick={() => handleNavClick(link.id)}
-                    className={`relative px-2.5 xl:px-3 py-1 text-xs font-medium tracking-wide transition-colors duration-200 rounded-full whitespace-nowrap ${
+                    className={`relative px-4 lg:px-5 py-2 text-[15px] lg:text-base font-semibold tracking-normal transition-colors duration-200 rounded-full whitespace-nowrap ${
                       isActive
-                        ? "text-lime-400 font-semibold"
-                        : "text-cream-200/80 hover:text-cream-100"
+                        ? "text-lime-400 font-bold"
+                        : "text-cream-100/90 hover:text-white"
                     }`}
                   >
                     {link.label}
                     {isActive && (
                       <motion.div
                         layoutId="activeNavIndicator"
-                        className="absolute inset-0 bg-forest-800 border border-lime-500/30 rounded-full -z-10 shadow-sm"
+                        className="absolute inset-0 bg-forest-800 border border-lime-500/40 rounded-full -z-10 shadow-sm"
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     )}
@@ -98,7 +93,7 @@ export function Navbar({ onOpenEnquiry }) {
                   if (onOpenEnquiry) onOpenEnquiry("General Enquiry");
                   scrollToAnchor("contact", -80);
                 }}
-                className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-lime-500 hover:bg-lime-400 text-forest-950 text-xs font-bold tracking-wider uppercase shadow-lift transition-all duration-300 active:scale-95 whitespace-nowrap"
+                className="group relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-lime-500 hover:bg-lime-400 text-forest-950 text-xs font-bold tracking-wider uppercase shadow-lift transition-all duration-300 active:scale-95 whitespace-nowrap"
               >
                 <span>Order / Enquire</span>
                 <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -106,7 +101,7 @@ export function Navbar({ onOpenEnquiry }) {
             </div>
 
             {/* Mobile Menu Toggle Button */}
-            <div className="flex items-center gap-2 lg:hidden">
+            <div className="flex items-center gap-2 md:hidden">
               <button
                 onClick={() => {
                   if (onOpenEnquiry) onOpenEnquiry("General Enquiry");
@@ -139,7 +134,7 @@ export function Navbar({ onOpenEnquiry }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 lg:hidden bg-forest-950/95 backdrop-blur-2xl flex flex-col justify-between p-6 overflow-y-auto"
+            className="fixed inset-0 z-50 md:hidden bg-forest-950/95 backdrop-blur-2xl flex flex-col justify-between p-6 overflow-y-auto"
           >
             {/* Top Bar with Logo & Close Button */}
             <div className="flex items-center justify-between pb-6 border-b border-forest-800">
