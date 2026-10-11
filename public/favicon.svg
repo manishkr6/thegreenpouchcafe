@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="18" fill="#0F1A12"/>
+  <circle cx="32" cy="32" r="22" stroke="#8DC63F" stroke-width="2.5" stroke-dasharray="3 3" opacity="0.6"/>
+  <!-- Elegant pouch / leaf monogram -->
+  <path d="M32 14C24 14 18 20 18 29C18 39 28 47 32 50C36 47 46 39 46 29C46 20 40 14 32 14Z" fill="#8DC63F" fill-opacity="0.2" stroke="#8DC63F" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="32" cy="31" r="5" fill="#8DC63F"/>
+  <path d="M32 23V26" stroke="#8DC63F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M26 31H29" stroke="#8DC63F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M35 31H38" stroke="#8DC63F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M32 36V39" stroke="#8DC63F" stroke-width="2" stroke-linecap="round"/>
+</svg>
